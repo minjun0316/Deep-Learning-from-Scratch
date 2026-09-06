@@ -11,3 +11,6 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# mnist data
+/book1/Ch3.Neural_Network/mnist.pkl
