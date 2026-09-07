@@ -2,7 +2,7 @@ import sys, os
 import time
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 import numpy as np
-from ch4_2_1CEE import CEE
+from ch4_2_1CEE import mini_batch_CCE
 from Ch3_Neural_Network.ch3_2_4Sigmoid import sigmoid
 from Ch3_Neural_Network.ch3_5_5softmax import softmax
 from ch4_4_1partial_derivative import partial_derivative
@@ -33,7 +33,7 @@ class TwoLayerNet:
 
     def loss(self, x, t):
         y = self.predict(x)
-        return CEE(y, t)
+        return mini_batch_CCE(y, t)
 
     def accuracy(self, x, t):
         y = self.predict(x)
